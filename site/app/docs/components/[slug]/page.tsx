@@ -66,7 +66,7 @@ export default async function ComponentPage({
             href={component.editUrl}
             target="_blank"
             rel="noreferrer"
-            className="link-quiet inline-flex shrink-0 items-center gap-1.5 self-start text-[12px] font-medium text-ts-muted hover:text-ts-ink"
+            className="link-quiet inline-flex shrink-0 items-center gap-1.5 self-start sm:self-center text-[13px] font-medium text-ts-muted hover:text-ts-ink"
           >
             Read the source
             <span aria-hidden="true">↗</span>

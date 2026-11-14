@@ -34,7 +34,7 @@ body {
   background: var(--ts-bg);
   color: var(--ts-ink);
   font-family: var(--ts-font-sans);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -293,7 +293,7 @@ button:focus-visible {
 }
 
 .prose-tessera {
-  font-size: 15.5px;
+  font-size: 16.5px;
   line-height: 1.72;
   color: var(--ts-muted);
 }
@@ -301,7 +301,7 @@ button:focus-visible {
 .prose-tessera h2 {
   margin-top: 2.5rem;
   margin-bottom: 0.85rem;
-  font-size: 1.28rem;
+  font-size: 1.34rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.3;
@@ -311,7 +311,7 @@ button:focus-visible {
 .prose-tessera h3 {
   margin-top: 1.8rem;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.06rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: var(--ts-ink);

@@ -18,7 +18,7 @@ export function DocsPageHeader({
         {title}
       </h1>
       {description ? (
-        <p className="mt-4 max-w-[62ch] text-[14.5px] leading-relaxed text-ts-muted">
+        <p className="mt-4 max-w-[62ch] text-[15.5px] leading-relaxed text-ts-muted">
           {description}
         </p>
       ) : null}
