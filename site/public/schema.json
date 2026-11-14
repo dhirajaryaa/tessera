@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhirajaryaa.github.io/tessera/schema.json",
+  "title": "Tessera configuration",
+  "description": "Paths used by the Tessera CLI when copying components into a project.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "The URL of this schema."
+    },
+    "componentsDir": {
+      "type": "string",
+      "description": "Directory for copied component files, relative to the project root."
+    },
+    "libDir": {
+      "type": "string",
+      "description": "Directory for utils.ts, relative to the project root."
+    },
+    "css": {
+      "type": "string",
+      "description": "Directory containing the global stylesheet."
+    },
+    "themeFile": {
+      "type": "string",
+      "description": "Path to the copied tessera.css token sheet."
+    }
+  },
+  "additionalProperties": true
+}

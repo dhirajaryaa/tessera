@@ -1,0 +1,13 @@
+node_modules/
+site/node_modules/
+site/.next/
+site/out/
+site/next-env.d.ts
+site/tsconfig.tsbuildinfo
+site/components/tessera/
+site/lib/utils.ts
+site/styles/tessera.css
+.DS_Store
+*.log
+.env
+.env.local

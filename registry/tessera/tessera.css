@@ -1,0 +1,213 @@
+/*
+  Tessera — design tokens and the few behaviours Tailwind is bad at.
+  Import once, after Tailwind:
+
+    @import "tailwindcss";
+    @import "./tessera.css";
+*/
+
+@theme inline {
+  --color-ts-bg: var(--ts-bg);
+  --color-ts-surface: var(--ts-surface);
+  --color-ts-surface-2: var(--ts-surface-2);
+  --color-ts-ink: var(--ts-ink);
+  --color-ts-muted: var(--ts-muted);
+  --color-ts-line: var(--ts-line);
+  --color-ts-line-strong: var(--ts-line-strong);
+  --color-ts-accent: var(--ts-accent);
+  --color-ts-accent-hover: var(--ts-accent-hover);
+  --color-ts-accent-ink: var(--ts-accent-ink);
+  --color-ts-success: var(--ts-success);
+  --color-ts-warning: var(--ts-warning);
+  --color-ts-danger: var(--ts-danger);
+
+  --radius-ts: var(--ts-radius);
+  --font-ts-sans: var(--ts-font-sans);
+  --font-ts-mono: var(--ts-font-mono);
+  --font-ts-display: var(--ts-font-display);
+  --shadow-ts: var(--ts-shadow);
+}
+
+:root,
+[data-theme="paper"] {
+  color-scheme: light;
+
+  --ts-bg: #f2ece1;
+  --ts-surface: #fbf7ee;
+  --ts-surface-2: #e9e1d3;
+  --ts-ink: #1a1712;
+  --ts-muted: #6e6558;
+  --ts-line: #d9cfbf;
+  --ts-line-strong: #b7aa96;
+  --ts-accent: #e24a21;
+  --ts-accent-hover: #c83d18;
+  --ts-accent-ink: #fff8ef;
+  --ts-success: #24774e;
+  --ts-warning: #8a5607;
+  --ts-danger: #ac2f26;
+
+  --ts-radius: 8px;
+  --ts-font-sans: "Inter Tight Variable", "Inter Tight", "Inter", ui-sans-serif,
+    system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ts-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+  --ts-font-display: "Instrument Serif", ui-serif, Georgia, "Times New Roman",
+    serif;
+  --ts-shadow: 0 1px 0 rgb(26 23 18 / 0.04), 0 18px 50px -24px rgb(26 23 18 / 0.28);
+}
+
+[data-theme="ink"] {
+  color-scheme: dark;
+
+  --ts-bg: #121110;
+  --ts-surface: #1a1815;
+  --ts-surface-2: #24211d;
+  --ts-ink: #f2ece2;
+  --ts-muted: #a79b8b;
+  --ts-line: #332f29;
+  --ts-line-strong: #4a443b;
+  --ts-accent: #ff6b3d;
+  --ts-accent-hover: #ff8159;
+  --ts-accent-ink: #1a1712;
+  --ts-success: #6bc596;
+  --ts-warning: #e6a94a;
+  --ts-danger: #f27d72;
+
+  --ts-shadow: 0 1px 0 rgb(0 0 0 / 0.2), 0 18px 50px -24px rgb(0 0 0 / 0.8);
+}
+
+[data-theme="moss"] {
+  color-scheme: dark;
+
+  --ts-bg: #0d1712;
+  --ts-surface: #14221a;
+  --ts-surface-2: #1c2d22;
+  --ts-ink: #e8f0e3;
+  --ts-muted: #9cab9c;
+  --ts-line: #293c30;
+  --ts-line-strong: #3d5442;
+  --ts-accent: #e9b44c;
+  --ts-accent-hover: #f2c36a;
+  --ts-accent-ink: #121810;
+  --ts-success: #7ac79a;
+  --ts-warning: #e9b44c;
+  --ts-danger: #e98c82;
+
+  --ts-shadow: 0 1px 0 rgb(0 0 0 / 0.2), 0 18px 50px -24px rgb(0 0 0 / 0.7);
+}
+
+@layer base {
+  ::selection {
+    background: var(--ts-accent);
+    color: var(--ts-accent-ink);
+  }
+}
+
+/* Switch: the thumb lives inside the track, so a peer selector cannot reach it. */
+.ts-switch-input:checked + .ts-switch-track {
+  background: var(--ts-accent);
+  border-color: var(--ts-accent);
+}
+.ts-switch-input:checked + .ts-switch-track .ts-switch-thumb {
+  transform: translateX(16px);
+  background: var(--ts-accent-ink);
+}
+.ts-switch-input:focus-visible + .ts-switch-track {
+  outline: 2px solid var(--ts-ink);
+  outline-offset: 2px;
+}
+.ts-switch-track,
+.ts-switch-thumb {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+@keyframes ts-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ts-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ts-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ts-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-3px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes ts-accordion-in {
+  from {
+    opacity: 0;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ts-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ts-dialog-panel {
+  animation: ts-dialog-in 180ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+.ts-dialog-backdrop {
+  animation: ts-backdrop-in 160ms ease both;
+}
+.ts-toast {
+  animation: ts-toast-in 200ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+.ts-menu {
+  animation: ts-menu-in 140ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+.ts-spinner {
+  animation: ts-spin 700ms linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ts-dialog-panel,
+  .ts-dialog-backdrop,
+  .ts-toast,
+  .ts-menu,
+  .ts-spinner,
+  .ts-switch-track,
+  .ts-switch-thumb {
+    animation: none;
+    transition: none;
+  }
+}

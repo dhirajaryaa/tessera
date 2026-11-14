@@ -1,0 +1,181 @@
+[
+  {
+    "name": "base",
+    "title": "Base",
+    "description": "Tessera foundation: shared utils and global styles.",
+    "category": "Foundation",
+    "files": [
+      "utils.ts",
+      "tessera.css"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "button",
+    "title": "Button",
+    "description": "An action trigger styled with Tessera.",
+    "category": "Actions",
+    "files": [
+      "button.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "badge",
+    "title": "Badge",
+    "description": "A compact status mark with six tones.",
+    "category": "Actions",
+    "files": [
+      "badge.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "input",
+    "title": "Input",
+    "description": "A labelled text field with hint and error support.",
+    "category": "Forms",
+    "files": [
+      "input.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "textarea",
+    "title": "Textarea",
+    "description": "A multi-line text input.",
+    "category": "Forms",
+    "files": [
+      "textarea.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "select",
+    "title": "Select",
+    "description": "A dropdown select control.",
+    "category": "Forms",
+    "files": [
+      "select.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "checkbox",
+    "title": "Checkbox",
+    "description": "A checkbox input with label.",
+    "category": "Forms",
+    "files": [
+      "checkbox.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "switch",
+    "title": "Switch",
+    "description": "A toggle switch input.",
+    "category": "Forms",
+    "files": [
+      "switch.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "card",
+    "title": "Card",
+    "description": "A composed card layout for content grouping.",
+    "category": "Layout",
+    "files": [
+      "card.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "tabs",
+    "title": "Tabs",
+    "description": "Peer views with arrow-key navigation.",
+    "category": "Navigation",
+    "files": [
+      "tabs.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "dialog",
+    "title": "Dialog",
+    "description": "A modal for one clear decision, with a focus trap.",
+    "category": "Feedback",
+    "files": [
+      "dialog.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "toast",
+    "title": "Toast",
+    "description": "Brief confirmations in a polite live region.",
+    "category": "Feedback",
+    "files": [
+      "toast.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "accordion",
+    "title": "Accordion",
+    "description": "Progressive disclosure for related sections.",
+    "category": "Layout",
+    "files": [
+      "accordion.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "avatar",
+    "title": "Avatar",
+    "description": "An identity avatar with fallback.",
+    "category": "Identity",
+    "files": [
+      "avatar.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "theme",
+    "title": "Theme provider",
+    "description": "The provider, hook and theme options for Paper, Ink and Moss.",
+    "category": "Appearance",
+    "files": [
+      "theme.tsx"
+    ],
+    "registryDependencies": [],
+    "dependencies": []
+  },
+  {
+    "name": "theme-switcher",
+    "title": "Theme Switcher",
+    "description": "Four tile glyphs for Paper, Ink, Moss and Auto.",
+    "category": "Appearance",
+    "files": [
+      "theme-switcher.tsx"
+    ],
+    "registryDependencies": [
+      "theme"
+    ],
+    "dependencies": []
+  }
+]

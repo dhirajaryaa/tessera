@@ -1,0 +1,39 @@
+{
+  "name": "@dhirajaryaa/tessera",
+  "version": "0.1.0",
+  "description": "Tessera: a small copy-paste UI component library",
+  "license": "MIT",
+  "author": "Dhiraj Arya",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhirajaryaa/tessera"
+  },
+  "homepage": "https://dhirajaryaa.github.io/tessera",
+  "type": "module",
+  "bin": {
+    "tessera": "./bin/tessera.mjs"
+  },
+  "files": [
+    "bin",
+    "registry",
+    "registry.json",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "site:dev": "npm --prefix site run dev",
+    "site:build": "npm --prefix site run build"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "tailwindcss",
+    "components",
+    "copy-paste",
+    "design-system"
+  ]
+}

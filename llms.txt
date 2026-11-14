@@ -1,0 +1,129 @@
+# Tessera
+
+> A small copy-paste React UI kit built on Tailwind CSS v4 and CSS variables. Warm editorial design, custom tile theme glyphs, no runtime dependency.
+
+Canonical URL: https://dhirajaryaa.github.io/tessera
+Source: https://github.com/dhirajaryaa/tessera
+Components: 14
+Themes: paper, ink, moss, plus a system preference
+
+## Install
+
+Initialize once:
+
+    npx github:dhirajaryaa/tessera@main init
+
+Add parts:
+
+    npx github:dhirajaryaa/tessera@main add button dialog
+    npx github:dhirajaryaa/tessera@main add theme-switcher
+
+List the registry:
+
+    npx github:dhirajaryaa/tessera@main list
+
+Init writes `tessera.json`, copies `tessera.css` and `utils.ts`, and adds the CSS import after Tailwind:
+
+    @import "tailwindcss";
+    @import "./tessera.css";
+
+The root element needs a theme:
+
+    <html lang="en" data-theme="paper">
+
+## Components
+
+- button: solid, soft, outline, ghost, link. Sizes sm, md, lg, icon. Supports loading.
+- badge: neutral, accent, outline, success, warning, danger. Optional dot.
+- input: Input plus Field and Label for labels, hints and errors.
+- textarea: multi-line text with a vertical resize handle.
+- select: native select with a custom chevron. Takes option children.
+- checkbox: native checkbox with a label and optional description.
+- switch: immediate on or off. Uses a native checkbox with role switch.
+- card: Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter.
+- tabs: Tabs, TabsList, TabsTrigger, TabsContent with arrow-key navigation.
+- dialog: Dialog and DialogClose. Trigger prop, focus trap, Escape, focus restore.
+- toast: ToastProvider and useToast. Polite live region, auto-dismiss.
+- accordion: Accordion, AccordionItem, AccordionTrigger, AccordionContent. Single or multiple.
+- avatar: Avatar and AvatarGroup. Image or initials fallback.
+- theme-switcher: ThemeProvider, useTheme, ThemeSwitcher, ThemeGlyph.
+
+## API shapes
+
+    <Button variant="solid" size="md" loading={false}>Save</Button>
+    <Badge tone="success" dot>Active</Badge>
+
+    <Field label="Email" htmlFor="email" hint="Receipts only.">
+      <Input id="email" type="email" />
+    </Field>
+
+    <Field label="Plan" htmlFor="plan">
+      <Select id="plan"><option value="studio">Studio</option></Select>
+    </Field>
+
+    <Checkbox label="Email me a receipt" defaultChecked />
+    <Switch label="Weekly digest" checked={on} onCheckedChange={setOn} />
+
+    <Tabs defaultValue="general">
+      <TabsList aria-label="Sections">
+        <TabsTrigger value="general">General</TabsTrigger>
+      </TabsList>
+      <TabsContent value="general">...</TabsContent>
+    </Tabs>
+
+    <Dialog
+      title="Invite a teammate"
+      trigger={<Button>Invite</Button>}
+      footer={<DialogClose>Cancel</DialogClose>}
+    >
+      ...
+    </Dialog>
+
+    <Accordion type="single" collapsible defaultValue="one">
+      <AccordionItem value="one">
+        <AccordionTrigger>Question</AccordionTrigger>
+        <AccordionContent>Answer</AccordionContent>
+      </AccordionItem>
+    </Accordion>
+
+Common mistakes:
+
+- Button has no `primary` variant. The default is `solid`.
+- Badge uses `tone`, not `variant`.
+- Input has no label prop. Use Field.
+- Select takes option children, not an options array.
+- Dialog uses a `trigger` prop, not DialogTrigger or DialogContent.
+
+## Tokens
+
+Every component uses these variables and no palette classes:
+
+--ts-bg, --ts-surface, --ts-surface-2, --ts-ink, --ts-muted, --ts-line, --ts-line-strong, --ts-accent, --ts-accent-hover, --ts-accent-ink, --ts-success, --ts-warning, --ts-danger, --ts-radius, --ts-font-sans, --ts-font-mono, --ts-font-display, --ts-shadow.
+
+Default radius: 8px.
+Accent: one per screen. Primary actions, active indicators and focus rings.
+
+## Rules
+
+- Use native HTML and React state. No Radix, Headless UI, React Aria or CVA.
+- Do not add a runtime UI package.
+- Do not hard-code colours, radii or fonts outside the tokens.
+- Do not replace the four tile theme glyphs with sun and moon icons.
+- Keep keyboard access, visible focus, ARIA state, Escape and focus restore.
+- Copy is plain and specific. No marketing filler.
+
+## Documentation
+
+- https://dhirajaryaa.github.io/tessera/docs/installation/
+- https://dhirajaryaa.github.io/tessera/docs/theming/
+- https://dhirajaryaa.github.io/tessera/docs/components/
+- https://dhirajaryaa.github.io/tessera/docs/principles/
+- https://dhirajaryaa.github.io/tessera/docs/agents/
+- https://dhirajaryaa.github.io/tessera/docs/contributing/
+
+## Context files
+
+- AGENTS.md: repository and consumer contract.
+- CLAUDE.md: Claude Code notes.
+- skills/tessera/SKILL.md: portable skill with decision rules.
+- llms.txt: this file.
