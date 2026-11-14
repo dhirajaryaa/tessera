@@ -4,6 +4,10 @@
   "description": "Tessera: a small copy-paste UI component library",
   "license": "MIT",
   "author": "Dhiraj Arya",
+  "contributors": [
+    "Dhiraj Arya",
+    "Claude AI (Anthropic)"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dhirajaryaa/tessera"
