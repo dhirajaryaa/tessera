@@ -20,7 +20,7 @@ export function Hero() {
             <p className="eyebrow">A small UI kit · v0.1</p>
           </div>
 
-          <h1 className="enter-2 mt-5 text-[clamp(3.3rem,6.4vw,6.05rem)] font-medium leading-[0.9] tracking-[-0.072em] text-ts-ink">
+          <h1 className="enter-2 mt-5 pt-1.5 text-[clamp(3.3rem,6.4vw,6.05rem)] font-medium leading-[0.98] tracking-[-0.072em] text-ts-ink">
             Small parts.
             <span className="mt-1 block font-display font-normal italic tracking-[-0.03em] text-ts-accent">
               Sharp edges.
