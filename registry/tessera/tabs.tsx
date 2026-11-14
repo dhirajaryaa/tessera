@@ -115,7 +115,7 @@ export function TabsTrigger({
       onClick={() => tabs.setValue(value)}
       onKeyDown={moveFocus}
       className={cn(
-        "h-7 rounded-[5px] px-2.5 font-ts-sans text-[12px] font-medium text-ts-muted",
+        "inline-flex items-center justify-center gap-1.5 h-7 rounded-[5px] px-2.5 font-ts-sans text-[12px] font-medium text-ts-muted whitespace-nowrap",
         "transition-[background-color,color,box-shadow] duration-150",
         "hover:text-ts-ink",
         "data-[state=active]:bg-ts-surface data-[state=active]:text-ts-ink data-[state=active]:shadow-sm",
