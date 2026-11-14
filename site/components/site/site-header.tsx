@@ -47,8 +47,9 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="site-header sticky top-0 z-40 border-b border-ts-line">
-      <div className="shell-wide flex h-16 items-center justify-between gap-6">
+    <>
+      <header className="site-header sticky top-0 z-50 border-b border-ts-line">
+        <div className="shell-wide flex h-16 items-center justify-between gap-6">
         <Link
           href="/"
           aria-label="Tessera home"
@@ -118,63 +119,65 @@ export function SiteHeader() {
           </button>
         </div>
       </div>
+    </header>
 
-      {open ? (
-        <div
-          id="mobile-menu"
-          className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto border-t border-ts-line bg-ts-bg lg:hidden"
-        >
-          <div className="shell flex min-h-full flex-col py-8">
-            <p className="eyebrow">Navigate</p>
-            <nav aria-label="Mobile" className="mt-5 grid">
-              {links.map((link, index) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="flex items-baseline justify-between border-b border-ts-line py-4 text-ts-ink"
-                >
-                  <span className="text-[26px] font-medium tracking-[-0.04em]">
-                    {link.label}
-                  </span>
-                  <span className="font-mono text-[10px] text-ts-muted">
-                    0{index + 1}
-                  </span>
-                </Link>
-              ))}
-            </nav>
-
-            <div className="mt-8">
-              <p className="eyebrow">Appearance</p>
-              <div className="mt-3">
-                <ThemeSwitcher variant="rail" />
-              </div>
-            </div>
-
-            <div className="mt-8">
-              <p className="eyebrow">Install</p>
-              <InstallCommand
-                command="npx github:dhirajaryaa/tessera#main init"
-                className="mt-3"
-              />
-            </div>
-
-            <div className="mt-auto flex items-center justify-between border-t border-ts-line pt-6 text-[12px] text-ts-muted">
-              <a
-                href="https://github.com/dhirajaryaa/tessera"
-                target="_blank"
-                rel="noreferrer"
-                className="link-quiet inline-flex items-center gap-2 text-ts-ink"
+    {open ? (
+      <div
+        id="mobile-menu"
+        className="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto border-t border-ts-line bg-ts-bg lg:hidden"
+      >
+        <div className="shell flex min-h-full flex-col py-8">
+          <p className="eyebrow">Navigate</p>
+          <nav aria-label="Mobile" className="mt-5 grid">
+            {links.map((link, index) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="flex items-baseline justify-between border-b border-ts-line py-4 text-ts-ink"
               >
-                <PikaIcon icon={GithubIcon} size={14} strokeWidth={1.6} />
-                GitHub
-              </a>
-              <span className="font-mono text-[10px] uppercase tracking-[0.1em]">
-                MIT · 2026
-              </span>
+                <span className="text-[26px] font-medium tracking-[-0.04em]">
+                  {link.label}
+                </span>
+                <span className="font-mono text-[10px] text-ts-muted">
+                  0{index + 1}
+                </span>
+              </Link>
+            ))}
+          </nav>
+
+          <div className="mt-8">
+            <p className="eyebrow">Appearance</p>
+            <div className="mt-3">
+              <ThemeSwitcher variant="rail" />
             </div>
           </div>
+
+          <div className="mt-8">
+            <p className="eyebrow">Install</p>
+            <InstallCommand
+              command="npx github:dhirajaryaa/tessera#main init"
+              className="mt-3"
+            />
+          </div>
+
+          <div className="mt-auto flex items-center justify-between border-t border-ts-line pt-6 text-[12px] text-ts-muted">
+            <a
+              href="https://github.com/dhirajaryaa/tessera"
+              target="_blank"
+              rel="noreferrer"
+              className="link-quiet inline-flex items-center gap-2 text-ts-ink"
+            >
+              <PikaIcon icon={GithubIcon} size={14} strokeWidth={1.6} />
+              GitHub
+            </a>
+            <span className="font-mono text-[10px] uppercase tracking-[0.1em]">
+              MIT · 2026
+            </span>
+          </div>
         </div>
-      ) : null}
-    </header>
-  );
+      </div>
+    ) : null}
+  </>
+);
 }
