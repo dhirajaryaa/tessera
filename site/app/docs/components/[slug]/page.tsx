@@ -60,13 +60,13 @@ export default async function ComponentPage({
         title={component.name}
         description={component.description}
       >
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-end">
           <InstallCommand command={component.install} className="max-w-[460px]" />
           <a
             href={component.editUrl}
             target="_blank"
             rel="noreferrer"
-            className="link-quiet inline-flex shrink-0 items-center gap-1.5 self-start sm:self-center text-[13px] font-medium text-ts-muted hover:text-ts-ink"
+            className="link-quiet inline-flex shrink-0 items-center gap-1.5 self-start sm:self-auto sm:mb-2.5 text-[13px] font-medium text-ts-muted hover:text-ts-ink"
           >
             Read the source
             <span aria-hidden="true">↗</span>
