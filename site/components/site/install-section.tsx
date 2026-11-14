@@ -25,13 +25,13 @@ const steps = [
   {
     number: "01",
     title: "Init once",
-    command: "npx github:dhirajaryaa/tessera@main init",
+    command: "npx github:dhirajaryaa/tessera#main init",
     note: "Writes tessera.json, the token sheet and utils.ts. Wires the CSS import.",
   },
   {
     number: "02",
     title: "Add what you need",
-    command: "npx github:dhirajaryaa/tessera@main add button dialog",
+    command: "npx github:dhirajaryaa/tessera#main add button dialog",
     note: "Resolves dependencies, skips files you already changed.",
   },
   {
@@ -77,7 +77,7 @@ export function InstallSection() {
             <div className="code-scroll overflow-x-auto p-5 font-mono text-[11px] leading-[1.8] text-[#f2ece2]">
               <p>
                 <span className="text-[#6bc596]">~</span>{" "}
-                <span className="text-[#a79b8b]">npx github:dhirajaryaa/tessera@main init</span>
+                <span className="text-[#a79b8b]">npx github:dhirajaryaa/tessera#main init</span>
               </p>
               <p className="mt-1 text-[#6bc596]">✓ Tessera initialized</p>
               <p className="text-[#8a8177]">  created tessera.json</p>
@@ -86,7 +86,7 @@ export function InstallSection() {
               <p className="mt-3">
                 <span className="text-[#6bc596]">~</span>{" "}
                 <span className="text-[#a79b8b]">
-                  npx github:dhirajaryaa/tessera@main add button dialog
+                  npx github:dhirajaryaa/tessera#main add button dialog
                 </span>
                 <span className="caret ml-1" />
               </p>

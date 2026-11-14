@@ -24,7 +24,7 @@ export type ComponentDoc = ComponentMeta &
     editUrl: string;
   };
 
-const base = "npx github:dhirajaryaa/tessera@main add";
+const base = "npx github:dhirajaryaa/tessera#main add";
 
 const details: Record<string, Details> = {
   button: {

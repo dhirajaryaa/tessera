@@ -618,9 +618,9 @@ function cmdHelp() {
   out('  --no-color           Disable colored output.');
   out('');
   out(b('Examples:'));
-  out('  ' + paint('cyan', 'npx github:dhirajaryaa/tessera@main init'));
-  out('  ' + paint('cyan', 'npx github:dhirajaryaa/tessera@main add button dialog'));
-  out('  ' + paint('cyan', 'npx github:dhirajaryaa/tessera@main list'));
+  out('  ' + paint('cyan', 'npx github:dhirajaryaa/tessera#main init'));
+  out('  ' + paint('cyan', 'npx github:dhirajaryaa/tessera#main add button dialog'));
+  out('  ' + paint('cyan', 'npx github:dhirajaryaa/tessera#main list'));
   out('');
   out(b('Exit codes:') + ' 0 success, 1 user/CLI error.');
 }

@@ -19,14 +19,14 @@ Use this skill when installing, modifying, or composing Tessera components in Re
 Run the CLI command to initialize Tessera in a repository:
 
 ```bash
-npx github:dhirajaryaa/tessera@main init
+npx github:dhirajaryaa/tessera#main init
 ```
 
 Add components from the registry:
 
 ```bash
-npx github:dhirajaryaa/tessera@main add button dialog toast
-npx github:dhirajaryaa/tessera@main list
+npx github:dhirajaryaa/tessera#main add button dialog toast
+npx github:dhirajaryaa/tessera#main list
 ```
 
 Ensure `globals.css` imports Tailwind and the theme stylesheet:

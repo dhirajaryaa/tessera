@@ -153,7 +153,7 @@ export function SiteHeader() {
             <div className="mt-8">
               <p className="eyebrow">Install</p>
               <InstallCommand
-                command="npx github:dhirajaryaa/tessera@main init"
+                command="npx github:dhirajaryaa/tessera#main init"
                 className="mt-3"
               />
             </div>

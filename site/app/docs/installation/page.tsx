@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const quick = `# 1. Set up the token sheet, utils and config
-npx github:dhirajaryaa/tessera@main init
+npx github:dhirajaryaa/tessera#main init
 
 # 2. Add only the parts you need
-npx github:dhirajaryaa/tessera@main add button dialog
+npx github:dhirajaryaa/tessera#main add button dialog
 
 # 3. Import the file, not a package
 import { Button } from "@/components/tessera/button";`;
@@ -110,7 +110,7 @@ export default function InstallationPage() {
         description="Tessera is source code, not a dependency. One init writes the tokens and helpers. Each add copies a file you can read and change."
       >
         <div className="mt-6 max-w-[520px]">
-          <InstallCommand command="npx github:dhirajaryaa/tessera@main init" />
+          <InstallCommand command="npx github:dhirajaryaa/tessera#main init" />
         </div>
       </DocsPageHeader>
 

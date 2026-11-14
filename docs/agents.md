@@ -26,9 +26,9 @@ Claude Code reads `.claude/skills/tessera/SKILL.md`. Codex and OpenCode read `AG
 Every CLI command accepts `--json`:
 
 ```bash
-npx github:dhirajaryaa/tessera@main init --yes --json
-npx github:dhirajaryaa/tessera@main add button dialog --json
-npx github:dhirajaryaa/tessera@main list --json
+npx github:dhirajaryaa/tessera#main init --yes --json
+npx github:dhirajaryaa/tessera#main add button dialog --json
+npx github:dhirajaryaa/tessera#main list --json
 ```
 
 The output names every file that was created, updated or skipped.
@@ -63,7 +63,7 @@ You are adding a settings screen to this app with Tessera.
 
 1. Read AGENTS.md and the component docs in site/lib/component-docs.ts.
 2. Add the parts you need:
-   npx github:dhirajaryaa/tessera@main add switch select button toast
+   npx github:dhirajaryaa/tessera#main add switch select button toast
 3. Build the screen at app/settings/page.tsx.
 4. Use Field for every label. Use a Switch for settings that save at once.
 5. Use one solid Button for the primary action and ghost for cancel.

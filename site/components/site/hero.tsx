@@ -33,7 +33,7 @@ export function Hero() {
           </p>
 
           <div className="enter-3 mt-6 w-full max-w-[470px]">
-            <InstallCommand command="npx github:dhirajaryaa/tessera@main add button" />
+            <InstallCommand command="npx github:dhirajaryaa/tessera#main add button" />
           </div>
 
           <div className="enter-4 mt-5 flex flex-wrap items-center gap-3">

@@ -102,9 +102,9 @@ npm run dev          # local docs site
 ### Install
 
 ```bash
-npx github:dhirajaryaa/tessera@main init
-npx github:dhirajaryaa/tessera@main add button dialog
-npx github:dhirajaryaa/tessera@main list
+npx github:dhirajaryaa/tessera#main init
+npx github:dhirajaryaa/tessera#main add button dialog
+npx github:dhirajaryaa/tessera#main list
 ```
 
 Init does four things:

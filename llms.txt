@@ -11,16 +11,16 @@ Themes: paper, ink, moss, plus a system preference
 
 Initialize once:
 
-    npx github:dhirajaryaa/tessera@main init
+    npx github:dhirajaryaa/tessera#main init
 
 Add parts:
 
-    npx github:dhirajaryaa/tessera@main add button dialog
-    npx github:dhirajaryaa/tessera@main add theme-switcher
+    npx github:dhirajaryaa/tessera#main add button dialog
+    npx github:dhirajaryaa/tessera#main add theme-switcher
 
 List the registry:
 
-    npx github:dhirajaryaa/tessera@main list
+    npx github:dhirajaryaa/tessera#main list
 
 Init writes `tessera.json`, copies `tessera.css` and `utils.ts`, and adds the CSS import after Tailwind:
 

@@ -62,7 +62,7 @@ const prompt = `You are adding a settings screen to this app with Tessera.
 
 1. Read AGENTS.md and the component docs in site/lib/component-docs.ts.
 2. Add the parts you need:
-   npx github:dhirajaryaa/tessera@main add switch select button toast
+   npx github:dhirajaryaa/tessera#main add switch select button toast
 3. Build the screen at app/settings/page.tsx.
 4. Use Field for every label. Use a Switch for settings that save at once.
 5. Use one solid Button for the primary action and ghost for cancel.
@@ -70,9 +70,9 @@ const prompt = `You are adding a settings screen to this app with Tessera.
 7. Run: cd site && npm run sync && npm run typecheck && npm run build
 8. Report the files changed and any component you had to edit.`;
 
-const agentApi = `npx github:dhirajaryaa/tessera@main init --yes --json
-npx github:dhirajaryaa/tessera@main add button dialog --json
-npx github:dhirajaryaa/tessera@main list --json`;
+const agentApi = `npx github:dhirajaryaa/tessera#main init --yes --json
+npx github:dhirajaryaa/tessera#main add button dialog --json
+npx github:dhirajaryaa/tessera#main list --json`;
 
 const mistakes = [
   {

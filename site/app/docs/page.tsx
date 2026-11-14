@@ -67,7 +67,7 @@ export default function DocsIntroductionPage() {
         description="Tessera is a small React UI kit with an ownership model and a point of view. These pages cover the install, the tokens, every component and the rules that keep the set coherent."
       >
         <div className="mt-6 max-w-[470px]">
-          <InstallCommand command="npx github:dhirajaryaa/tessera@main init" />
+          <InstallCommand command="npx github:dhirajaryaa/tessera#main init" />
         </div>
       </DocsPageHeader>
 

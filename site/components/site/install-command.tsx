@@ -6,7 +6,7 @@ import { CheckTickSquareIcon, CopyIcon } from "@pikaicons/core-free";
 import { cn } from "@/lib/utils";
 
 export function InstallCommand({
-  command = "npx github:dhirajaryaa/tessera@main add button",
+  command = "npx github:dhirajaryaa/tessera#main add button",
   className,
   compact = false,
 }: {

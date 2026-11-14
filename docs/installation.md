@@ -25,7 +25,7 @@ Tessera is copied into your project, not installed as a runtime package. The CLI
 ## Init
 
 ```bash
-npx github:dhirajaryaa/tessera@main init
+npx github:dhirajaryaa/tessera#main init
 ```
 
 The CLI detects `src/`, the components directory, the lib directory and the global CSS file. If detection is wrong, pass `--components`, `--lib` and `--css`.
@@ -75,8 +75,8 @@ Paths are relative to the project root. Commit the file so the next person and t
 ## Add components
 
 ```bash
-npx github:dhirajaryaa/tessera@main add button dialog
-npx github:dhirajaryaa/tessera@main list
+npx github:dhirajaryaa/tessera#main add button dialog
+npx github:dhirajaryaa/tessera#main list
 ```
 
 The CLI resolves registry dependencies. For example, `theme-switcher` also adds `theme`.
@@ -122,7 +122,7 @@ npm install clsx tailwind-merge
 Add skips files that already exist. To take a newer version of one part:
 
 ```bash
-npx github:dhirajaryaa/tessera@main add button --overwrite
+npx github:dhirajaryaa/tessera#main add button --overwrite
 ```
 
 Then read the diff. If you edited the file, the diff is the conversation.

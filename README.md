@@ -28,13 +28,13 @@ The visual language is warm and editorial: bone paper, near-black ink, one vermi
 
 ```bash
 # 1. Set up the token sheet, utils and config
-npx github:dhirajaryaa/tessera@main init
+npx github:dhirajaryaa/tessera#main init
 
 # 2. Add the parts you need
-npx github:dhirajaryaa/tessera@main add button dialog
+npx github:dhirajaryaa/tessera#main add button dialog
 
 # 3. List everything in the registry
-npx github:dhirajaryaa/tessera@main list
+npx github:dhirajaryaa/tessera#main list
 ```
 
 Init writes `tessera.json`, copies `tessera.css` next to your global stylesheet, writes `utils.ts` with `cn()`, and adds the import after Tailwind:
