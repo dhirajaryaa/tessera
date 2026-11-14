@@ -72,6 +72,9 @@ export function SiteFooter() {
               Star the repo
               <PikaIcon icon={ArrowRightIcon} size={12} strokeWidth={1.7} />
             </a>
+            <p className="mt-4 text-[12px] leading-relaxed text-ts-muted">
+              Automated by Claude AI in collaboration with Dhiraj Arya.
+            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
@@ -111,7 +114,7 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col gap-3 border-t border-ts-line py-5 font-mono text-[9.5px] uppercase tracking-[0.1em] text-ts-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Dhiraj Arya · MIT</p>
+          <p>© 2026 Dhiraj Arya · Automated by Claude AI · MIT</p>
           <p>
             Icons by{" "}
             <a
