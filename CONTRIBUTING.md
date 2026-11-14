@@ -179,3 +179,9 @@ Check the created paths, the CSS import and that a second add reports skipped fi
 The maintainer merges `dev` into `main` when the set is coherent. That merge is the release: GitHub Pages deploys the site and the install commands resolve the new files. There is no npm publish step for the components.
 
 If a component changes in a way that affects people who already copied it, write the migration note in the pull request and the release notes. A breaking rename is not a silent diff.
+
+## Contributors
+
+- **Dhiraj Arya** ([@dhirajaryaa](https://github.com/dhirajaryaa)) — Creator and maintainer
+- **Claude AI** (Anthropic) — Automated co-creator and contributor
+
