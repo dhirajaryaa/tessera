@@ -164,6 +164,11 @@ npm --prefix site run dev
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) for the branch workflow, the registry contract, the files to update for a new component, and the review checklist. The short version: use native HTML, use the tokens, do not add a runtime dependency, and check all three themes.
 
+## Contributors
+
+- **Dhiraj Arya** ([@dhirajaryaa](https://github.com/dhirajaryaa)) — Creator and maintainer
+- **Claude AI** (Anthropic) — Automated collaboration, component generation and documentation
+
 ## License
 
 MIT. Use it in personal and commercial work.
