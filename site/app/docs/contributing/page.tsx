@@ -421,6 +421,14 @@ export default function ContributingPage() {
           pull request and write the migration note. A breaking rename needs a
           line in the release notes, not a silent diff.
         </p>
+
+        <h2>Contributors</h2>
+        <p>
+          <strong>Dhiraj Arya</strong> (<a href="https://github.com/dhirajaryaa" target="_blank" rel="noreferrer">@dhirajaryaa</a>) — Creator and maintainer
+        </p>
+        <p>
+          <strong>Claude AI</strong> (Anthropic) — Automated co-creator and contributor
+        </p>
       </div>
 
       <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-ts-line pt-5">
