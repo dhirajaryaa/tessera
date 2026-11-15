@@ -101,14 +101,24 @@ export interface ThemeSwitcherProps {
   variant?: "menu" | "rail";
   className?: string;
   align?: "left" | "right";
+  onThemeChange?: (theme: ThemePreference) => void;
 }
 
 export function ThemeSwitcher({
   variant = "menu",
   className,
   align = "right",
+  onThemeChange,
 }: ThemeSwitcherProps) {
   const { preference, setPreference } = useTheme();
+
+  const handleSetPreference = React.useCallback(
+    (next: ThemePreference) => {
+      setPreference(next);
+      onThemeChange?.(next);
+    },
+    [setPreference, onThemeChange]
+  );
 
   if (variant === "rail") {
     return (
@@ -128,7 +138,7 @@ export function ThemeSwitcher({
             aria-checked={preference === option.value}
             aria-label={`${option.label}: ${option.note}`}
             title={`${option.label} · ${option.note}`}
-            onClick={() => setPreference(option.value)}
+            onClick={() => handleSetPreference(option.value)}
             className={cn(
               "grid size-8 place-items-center rounded-[7px] text-ts-muted",
               "transition-[background-color,color,box-shadow,transform] duration-150",
@@ -149,7 +159,7 @@ export function ThemeSwitcher({
       className={className}
       align={align}
       preference={preference}
-      setPreference={setPreference}
+      onThemeChange={handleSetPreference}
     />
   );
 }
@@ -158,12 +168,12 @@ function ThemeMenu({
   className,
   align,
   preference,
-  setPreference,
+  onThemeChange,
 }: {
   className?: string;
   align: "left" | "right";
   preference: ThemePreference;
-  setPreference: (next: ThemePreference) => void;
+  onThemeChange: (next: ThemePreference) => void;
 }) {
   const [open, setOpen] = React.useState(false);
   const rootRef = React.useRef<HTMLDivElement>(null);
@@ -265,7 +275,7 @@ function ThemeMenu({
                 role="menuitemradio"
                 aria-checked={active}
                 onClick={() => {
-                  setPreference(option.value);
+                  onThemeChange(option.value);
                   setOpen(false);
                   triggerRef.current?.focus();
                 }}

@@ -118,7 +118,7 @@ function TextareaDemo() {
           rows={4}
           maxLength={240}
           value={value}
-          onChange={(event) => setValue(event.target.value)}
+          onChange={(value) => setValue(value)}
         />
       </Field>
     </div>
@@ -131,7 +131,7 @@ function SelectDemo() {
   return (
     <div className="grid max-w-[360px] gap-4">
       <Field label="Plan" htmlFor="demo-plan" hint="Change whenever. The proration is monthly.">
-        <Select id="demo-plan" value={plan} onChange={(event) => setPlan(event.target.value)}>
+        <Select id="demo-plan" value={plan}         onChange={(value) => setPlan(value)}>
           <option value="personal">Personal</option>
           <option value="studio">Studio</option>
           <option value="studio-plus">Studio plus</option>
@@ -159,13 +159,13 @@ function CheckboxDemo() {
         label="Email me a receipt"
         description="One message after payment."
         checked={items.includes("receipt")}
-        onChange={(event) => toggle("receipt", event.target.checked)}
+        onChange={(checked) => toggle("receipt", checked)}
       />
       <Checkbox
         label="Save this card"
         description="Stored with the payment provider."
         checked={items.includes("card")}
-        onChange={(event) => toggle("card", event.target.checked)}
+        onChange={(checked) => toggle("card", checked)}
       />
       <Checkbox label="Disabled option" disabled />
     </div>

@@ -5,10 +5,11 @@ export type ButtonVariant = "solid" | "soft" | "outline" | "ghost" | "link";
 export type ButtonSize = "sm" | "md" | "lg" | "icon";
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   loading?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const variantClasses: Record<ButtonVariant, string> = {
@@ -39,6 +40,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       disabled,
       children,
       type = "button",
+      onClick,
       ...props
     },
     ref
@@ -49,6 +51,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         disabled={disabled || loading}
         aria-busy={loading || undefined}
+        onClick={onClick}
         className={cn(
           "inline-flex select-none items-center justify-center gap-2 whitespace-nowrap rounded-ts border font-ts-sans text-[13.5px] font-semibold leading-none tracking-[-0.01em]",
           "transition-[background-color,color,border-color,transform,box-shadow] duration-150",

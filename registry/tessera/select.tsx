@@ -2,14 +2,17 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export interface SelectProps
-  extends React.SelectHTMLAttributes<HTMLSelectElement> {}
+  extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "onChange"> {
+  onChange?: (value: string) => void;
+}
 
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
-  function Select({ className, children, ...props }, ref) {
+  function Select({ className, children, onChange, ...props }, ref) {
     return (
       <div className="relative">
         <select
           ref={ref}
+          onChange={(event) => onChange?.(event.target.value)}
           className={cn(
             "h-9 w-full appearance-none rounded-ts border border-ts-line-strong bg-ts-surface pl-3 pr-9",
             "font-ts-sans text-[13.5px] text-ts-ink",

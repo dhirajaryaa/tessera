@@ -2,14 +2,17 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "onChange"> {
+  onChange?: (value: string) => void;
+}
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  function Input({ className, type = "text", ...props }, ref) {
+  function Input({ className, type = "text", onChange, ...props }, ref) {
     return (
       <input
         ref={ref}
         type={type}
+        onChange={(event) => onChange?.(event.target.value)}
         className={cn(
           "h-9 w-full rounded-ts border border-ts-line-strong bg-ts-surface px-3",
           "font-ts-sans text-[13.5px] text-ts-ink placeholder:text-ts-muted/75",

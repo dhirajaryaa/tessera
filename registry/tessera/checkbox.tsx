@@ -1,19 +1,27 @@
 import * as React from "react";
-import { cn } from "@/lib/utils";
+import { cn, useControllableState } from "@/lib/utils";
 
 export interface CheckboxProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "onChange"> {
   label?: React.ReactNode;
   description?: React.ReactNode;
+  checked?: boolean;
+  defaultChecked?: boolean;
+  onChange?: (checked: boolean) => void;
 }
 
 export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
   function Checkbox(
-    { className, label, description, disabled, id, ...props },
+    { className, label, description, disabled, id, checked, defaultChecked, onChange, ...props },
     ref
   ) {
     const generatedId = React.useId();
     const inputId = id ?? generatedId;
+    const [isChecked, setChecked] = useControllableState({
+      value: checked,
+      defaultValue: defaultChecked ?? false,
+      onChange,
+    });
 
     return (
       <label
@@ -28,7 +36,9 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
           ref={ref}
           id={inputId}
           type="checkbox"
+          checked={isChecked}
           disabled={disabled}
+          onChange={(event) => setChecked(event.target.checked)}
           className="peer sr-only"
           {...props}
         />

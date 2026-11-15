@@ -2,14 +2,17 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export interface TextareaProps
-  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+  extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, "onChange"> {
+  onChange?: (value: string) => void;
+}
 
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  function Textarea({ className, rows = 4, ...props }, ref) {
+  function Textarea({ className, rows = 4, onChange, ...props }, ref) {
     return (
       <textarea
         ref={ref}
         rows={rows}
+        onChange={(event) => onChange?.(event.target.value)}
         className={cn(
           "min-h-[92px] w-full resize-y rounded-ts border border-ts-line-strong bg-ts-surface px-3 py-2.5",
           "font-ts-sans text-[13.5px] leading-relaxed text-ts-ink placeholder:text-ts-muted/75",
